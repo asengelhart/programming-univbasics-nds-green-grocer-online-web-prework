@@ -25,6 +25,7 @@ def find_item_index(name, collection)
   end 
   nil 
 end 
+
 def consolidate_cart(cart)
   # Consult README for inputs and outputs
   #
