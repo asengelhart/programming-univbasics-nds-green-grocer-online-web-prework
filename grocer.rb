@@ -52,6 +52,8 @@ def apply_coupons(cart, coupons)
     coupon = coupons[coupons_index]
     matching_cart_item = find_item_by_name_in_collection(coupon[:name], cart)
     if matching_cart_item
+      if matching_cart_item[:count] >= coupon[:num]
+        
       
 end
 
