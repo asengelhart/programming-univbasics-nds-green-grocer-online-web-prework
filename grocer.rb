@@ -34,6 +34,8 @@ def consolidate_cart(cart)
       result_index += 1 
     end 
     unless item_found
+      new_entry = find_item_by_name_in_collection(item_name, cart)
+      new_entry[:count] = 1 
       
     i += 1 
   end
