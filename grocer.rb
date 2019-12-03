@@ -59,12 +59,11 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  coupon_index = 0 
-  while coupon_index < coupons.length do 
-    coupon = coupons[coupon_index]
-    cart_index = find_item_index(coupon[:item], cart)
-    if cart_index 
-      cart[cart_index][]
+  result = []
+  cart_index = 0 
+  coupon_applied = []
+  while cart_index < cart.length do 
+    
         
       
 end
