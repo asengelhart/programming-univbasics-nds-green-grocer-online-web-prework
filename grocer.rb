@@ -72,8 +72,12 @@ def apply_coupons(cart, coupons)
         new_value = value 
         case key
           when :item 
-            new_value +=
-        
+            new_value += " W/COUPON"
+          when :price 
+            new_value = (coupon[:cost] / coupon[:num]).round(2)
+          when :count 
+            new_value = coupon[:num]
+            
       
 end
 
