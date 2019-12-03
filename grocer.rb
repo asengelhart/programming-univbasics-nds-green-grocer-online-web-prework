@@ -71,6 +71,8 @@ def apply_coupons(cart, coupons)
       cart_item.each do |key, value|
         new_value = value 
         case key
+          when :item 
+            new_value +=
         
       
 end
