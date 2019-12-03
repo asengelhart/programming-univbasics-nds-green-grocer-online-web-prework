@@ -3,6 +3,7 @@ def return_first(arr)
 end 
 
 a = [{:i => 0}, {:j => 1}]
-a.push(return_first(a))
+b = return_first(a)
+a.push(b)
 a[2][:i] = 2 
 puts a
