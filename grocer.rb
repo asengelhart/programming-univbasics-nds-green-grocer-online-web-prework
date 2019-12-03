@@ -67,7 +67,10 @@ def apply_coupons(cart, coupons)
     coupon = find_item_by_name_in_collection(cart_item[:name], coupons)
     if coupon 
       cart_item[:count] -= coupon[:num]
-      coupon_applied_item = 
+      coupon_applied_item = {}
+      cart_item.each do |key, value|
+        new_value = value 
+        case key
         
       
 end
