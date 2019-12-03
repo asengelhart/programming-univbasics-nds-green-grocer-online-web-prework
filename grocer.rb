@@ -84,6 +84,7 @@ def apply_coupons(cart, coupons)
       coupon_applied << coupon_applied_item
     end 
     result << cart_item
+    cart_index += 1 
   end 
   coupon_applied.length.times do |index|
     result << coupon_applied[index]
