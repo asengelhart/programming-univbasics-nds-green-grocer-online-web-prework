@@ -18,6 +18,25 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+  result = []
+  i = 0 
+  while i < cart.length do 
+    item_name = cart[i][:item]
+    result_index = 0 
+    item_found_at = false  
+    while result_index < result.length do 
+      current_item = result[result_index]
+      if current_item[:item] == item_name
+        current_item[:count] += 1 
+        item_found = true
+        break
+      end 
+      result_index += 1 
+    end 
+    unless item_found
+      
+    i += 1 
+  end
 end
 
 def apply_coupons(cart, coupons)
