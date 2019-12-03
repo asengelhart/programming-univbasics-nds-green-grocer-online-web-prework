@@ -13,6 +13,18 @@ def find_item_by_name_in_collection(name, collection)
   nil # item was not found
 end
 
+def find_item_index(name, collection)
+  # Finds index number of name within collection
+  counter = 0 
+  while counter < collection.length do 
+    if collection[counter][:item] == name 
+      return counter
+    else 
+      counter += 1 
+    end 
+  end 
+  nil 
+
 def consolidate_cart(cart)
   # Consult README for inputs and outputs
   #
@@ -47,12 +59,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  coupons_index = 0 
-  while coupons_index < coupons.length do 
-    coupon = coupons[coupons_index]
-    matching_cart_item = find_item_by_name_in_collection(coupon[:name], cart)
-    if matching_cart_item
-      if matching_cart_item[:count] >= coupon[:num]
+  
         
       
 end
