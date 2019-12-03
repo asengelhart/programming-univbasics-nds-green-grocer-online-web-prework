@@ -77,8 +77,17 @@ def apply_coupons(cart, coupons)
             new_value = (coupon[:cost] / coupon[:num]).round(2)
           when :count 
             new_value = coupon[:num]
-            
-      
+        end
+        coupon_applied_item[key] = new_value
+      end 
+      coupon_applied << coupon_applied_item
+    end 
+    result << cart_item
+  end 
+  coupon_applied.length.times do |index|
+    result << coupon_applied[index]
+  end
+  result 
 end
 
 def apply_clearance(cart)
